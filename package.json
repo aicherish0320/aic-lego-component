@@ -1,10 +1,25 @@
 {
   "name": "aic-lego-component",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "main": "dist/aic-lego-component.umd.js",
   "module": "dist/aic-lego-component.esm.js",
   "types": "dist/index.d.ts",
+  "author": "aicherish",
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "Vue3"
+  ],
+  "homepage": "https://github.com/aicherish0320/aic-lego-component",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aicherish0320/aic-lego-component"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",

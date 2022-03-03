@@ -1,29 +1,23 @@
-# aic-lego-component
+# AicComponent
 
-## Project setup
-```
-yarn install
-```
+AicComponent 组件库
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+# Using npm or yarn
+
+```shell
+  npm install aic-lego-component --save
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
+```shell
+  yarn add aic-lego-component
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+```js
+import AicLegoComponent from 'aic-lego-component'
+import 'aic-lego-component/dist/aic-lego-component.css'
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+const app = createApp(App)
+
+app.use(AicLegoComponent)
+app.mount('#app')
+```
