@@ -1,7 +1,9 @@
 import { App } from 'vue'
+import LImage from './components/LImage'
+import LShape from './components/LShape'
 import LText from './components/LText'
 
-const components = [LText]
+const components = [LText, LImage, LShape]
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const install = (app: App) => {
@@ -11,7 +13,7 @@ const install = (app: App) => {
 }
 
 // 单个组件导入并且作为插件使用
-export { LText, install }
+export { LText, LImage, LShape, install }
 // 所有组件一次性全部导入并且作为插件使用
 export default {
   install

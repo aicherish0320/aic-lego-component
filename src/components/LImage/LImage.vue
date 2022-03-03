@@ -1,30 +1,25 @@
 <template>
-  <component
-    :is="tag"
+  <img
     :style="styleProps"
-    class="l-text-component"
-    @click="handleClick"
-  >
-    {{ text }}
-  </component>
+    class="l-image-component"
+    @click.prevent="handleClick"
+    :src="src"
+  />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
 import useComponentCommon from '../../hooks/useComponentCommon'
 import {
   transformToComponentProps,
-  textDefaultProps,
-  textStylePropNames
+  imageDefaultProps,
+  imageStylePropsNames
 } from '../../defaultProps'
-const defaultProps = transformToComponentProps(textDefaultProps)
+const defaultProps = transformToComponentProps(imageDefaultProps)
+
 // array that contains style props
 export default defineComponent({
-  name: 'l-text',
+  name: 'LImage',
   props: {
-    tag: {
-      type: String,
-      default: 'div'
-    },
     ...defaultProps
   },
   setup(props) {
@@ -32,7 +27,7 @@ export default defineComponent({
     // 抽离并且获得 styleProps
     const { styleProps, handleClick } = useComponentCommon(
       props,
-      textStylePropNames
+      imageStylePropsNames
     )
     return {
       styleProps,
@@ -43,17 +38,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-h2.l-text-component,
-p.l-text-component {
-  margin-bottom: 0;
-}
-button.l-text-component {
-  padding: 5px 10px;
-  cursor: pointer;
-}
-.l-text-component {
-  box-sizing: border-box;
-  white-space: pre-wrap;
+.l-image-component {
+  max-width: 100%;
   position: relative !important;
 }
 </style>

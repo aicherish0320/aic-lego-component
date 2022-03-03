@@ -19,7 +19,7 @@ import {
 const defaultProps = transformToComponentProps(textDefaultProps)
 // array that contains style props
 export default defineComponent({
-  name: 'l-text',
+  name: 'LText',
   props: {
     tag: {
       type: String,
