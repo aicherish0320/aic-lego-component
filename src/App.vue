@@ -1,8 +1,8 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <h1>Hello</h1>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -10,7 +10,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
