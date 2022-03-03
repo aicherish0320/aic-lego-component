@@ -23,12 +23,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
+    "test:watch": "vue-cli-service test:unit --watch",
+    "test": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint --max-warnings 10",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
     "clean": "rimraf ./dist",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run lint && npm run build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "lodash-es": "^4.17.21"
@@ -64,7 +66,8 @@
     "sass-loader": "^8.0.2",
     "typescript": "~4.1.5",
     "vue": "^3.0.0",
-    "vue-jest": "^5.0.0-0"
+    "vue-jest": "^5.0.0-0",
+    "husky": "^7.0.0"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
