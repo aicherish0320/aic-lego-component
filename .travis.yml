@@ -1,4 +1,4 @@
 language: node.js
 node_js:
   - node
-script: echo "Running tests against $(node -v) ..."
+script: echo "Running tests against $(npm -v) ..."
